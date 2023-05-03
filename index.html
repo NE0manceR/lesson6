@@ -1,12 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/style.min.css">
   <title>Lesson 6</title>
 </head>
+
 <body>
-  Hello Lesson
+  <header class="header">
+    <div class="header__link-wrap container">
+      <div>
+        <a class="header__link" href="">Paints</a>
+        <a class="header__link" href="">Samples</a>
+        <a class="header__link" href="">Gallery</a>
+        <a class="header__link" href="">FAQ</a>
+      </div>
+
+      <div>
+        <a class="header__link" href="">Paints</a>
+        <a class="header__link" href="">Samples</a>
+        <a class="header__link" href="">Gallery</a>
+        <a class="header__link" href="">FAQ</a>
+      </div>
+    </div>
+  </header>
+  <section class="main">
+    <div class="main__filter"></div>
+    <img class="main__bcg" src="./img/main_bcg.png" alt="img">
+    <div class="container main__content">
+      <h1 class="main__title">
+        Eco-Friendly Paints For A Healthy Home
+      </h1>
+      <button class="main__btn">Shop our colors</button>
+    </div>
+  </section>
+
+  <div class="social">
+    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_4106_2)">
+        <path
+          d="M0 10.5632C0.00122846 15.7603 3.7572 20.1856 8.85858 21V13.6164H6.19478V10.5632H8.86173V8.23899C8.74246 7.13766 9.11635 6.04006 9.88188 5.24384C10.6474 4.44762 11.7253 4.03533 12.8232 4.11877C13.6112 4.13158 14.3972 4.20219 15.1752 4.33007V6.92791H13.848C13.3911 6.8677 12.9317 7.01954 12.5993 7.34064C12.2669 7.66175 12.0974 8.11737 12.1387 8.57912V10.5632H15.0481L14.583 13.6174H12.1387V21C17.6556 20.1227 21.5243 15.0529 20.9421 9.46349C20.3598 3.87406 15.5303 -0.278321 9.95243 0.0145843C4.37452 0.30749 0.000892468 4.94314 0 10.5632Z"
+          fill="#43d313" fill-opacity="0.6" />
+      </g>
+      <defs>
+        <clipPath id="clip0_4106_2">
+          <rect width="21" height="21" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_4106_2)">
+        <path
+          d="M0 10.5632C0.00122846 15.7603 3.7572 20.1856 8.85858 21V13.6164H6.19478V10.5632H8.86173V8.23899C8.74246 7.13766 9.11635 6.04006 9.88188 5.24384C10.6474 4.44762 11.7253 4.03533 12.8232 4.11877C13.6112 4.13158 14.3972 4.20219 15.1752 4.33007V6.92791H13.848C13.3911 6.8677 12.9317 7.01954 12.5993 7.34064C12.2669 7.66175 12.0974 8.11737 12.1387 8.57912V10.5632H15.0481L14.583 13.6174H12.1387V21C17.6556 20.1227 21.5243 15.0529 20.9421 9.46349C20.3598 3.87406 15.5303 -0.278321 9.95243 0.0145843C4.37452 0.30749 0.000892468 4.94314 0 10.5632Z"
+          fill="white" fill-opacity="0.6" />
+      </g>
+      <defs>
+        <clipPath id="clip0_4106_2">
+          <rect width="21" height="21" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+    <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clip-path="url(#clip0_4106_2)">
+        <path
+          d="M0 10.5632C0.00122846 15.7603 3.7572 20.1856 8.85858 21V13.6164H6.19478V10.5632H8.86173V8.23899C8.74246 7.13766 9.11635 6.04006 9.88188 5.24384C10.6474 4.44762 11.7253 4.03533 12.8232 4.11877C13.6112 4.13158 14.3972 4.20219 15.1752 4.33007V6.92791H13.848C13.3911 6.8677 12.9317 7.01954 12.5993 7.34064C12.2669 7.66175 12.0974 8.11737 12.1387 8.57912V10.5632H15.0481L14.583 13.6174H12.1387V21C17.6556 20.1227 21.5243 15.0529 20.9421 9.46349C20.3598 3.87406 15.5303 -0.278321 9.95243 0.0145843C4.37452 0.30749 0.000892468 4.94314 0 10.5632Z"
+          fill="white" fill-opacity="0.6" />
+      </g>
+      <defs>
+        <clipPath id="clip0_4106_2">
+          <rect width="21" height="21" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+  </div>
+
+  <script>
+    let header = document.querySelector('.header');
+    let button = document.querySelector('.main__btn');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 120) {
+        header.classList.add('fixed');
+      }
+
+      if (window.scrollY == 0) {
+        header.classList.remove('fixed');
+      }
+    })
+
+  </script>
 </body>
+
 </html>
